@@ -268,7 +268,7 @@ def data_model_drift():
     st.markdown("---")
     st.subheader("Model Performance Drift")
     
-    # Simulate performance metrics over time
+    
     dates = pd.date_range(end=datetime.today(), periods=30).to_list()
     accuracy = np.clip(np.random.normal(0.85, 0.05, 30).cumsum() / np.arange(1, 31), 0.7, 0.95)
     precision = np.clip(accuracy - np.random.normal(0.05, 0.01, 30), 0.6, 0.95)
